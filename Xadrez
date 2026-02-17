@@ -2,12 +2,9 @@
 
 int main() {
 
-    // ================================
+    // =====================================
     // Movimento da Torre (for)
-    // ================================
-    // A Torre irá se mover 5 casas para a direita.
-    // Estrutura utilizada: for
-
+    // =====================================
     int casasTorre = 5;
 
     printf("Movimento da Torre:\n");
@@ -17,14 +14,71 @@ int main() {
     }
 
 
-    // ================================
+    // =====================================
     // Movimento do Bispo (while)
-    // ================================
-    // O Bispo irá se mover 5 casas na diagonal
-    // (Cima e Direita ao mesmo tempo).
-    // Estrutura utilizada: while
-
+    // =====================================
     int casasBispo = 5;
     int contadorBispo = 0;
 
-    printf("\nMovimento
+    printf("\nMovimento do Bispo:\n");
+
+    while (contadorBispo < casasBispo) {
+        printf("Cima, Direita\n");
+        contadorBispo++;
+    }
+
+
+    // =====================================
+    // Movimento da Rainha (do-while)
+    // =====================================
+    int casasRainha = 8;
+    int contadorRainha = 0;
+
+    printf("\nMovimento da Rainha:\n");
+
+    do {
+        printf("Esquerda\n");
+        contadorRainha++;
+    } while (contadorRainha < casasRainha);
+
+
+    // =====================================
+    // Movimento do Cavalo (Loops Aninhados)
+    // =====================================
+    // O Cavalo se moverá:
+    // 2 casas para baixo
+    // 1 casa para a esquerda
+    // Movimento em "L"
+    //
+    // Estrutura utilizada:
+    // Loop externo -> for
+    // Loop interno -> while
+
+    printf("\nMovimento do Cavalo:\n");
+
+    int movimentosVerticais = 2;  // duas casas para baixo
+    int movimentosHorizontais = 1; // uma casa para a esquerda
+
+    // Loop externo (for) controla o movimento vertical
+    for (int i = 0; i < movimentosVerticais; i++) {
+
+        int contadorVertical = 0;
+
+        // Loop interno (while) executa uma vez por iteração do for
+        while (contadorVertical < 1) {
+            printf("Baixo\n");
+            contadorVertical++;
+        }
+    }
+
+    // Após mover duas casas para baixo,
+    // executa o movimento horizontal
+    int contadorHorizontal = 0;
+
+    while (contadorHorizontal < movimentosHorizontais) {
+        printf("Esquerda\n");
+        contadorHorizontal++;
+    }
+
+    return 0;
+}
