@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+
+    // ================================
+    // Movimento da Torre (for)
+    // ================================
+    // A Torre irá se mover 5 casas para a direita.
+    // Estrutura utilizada: for
+
+    int casasTorre = 5;
+
+    printf("Movimento da Torre:\n");
+
+    for (int i = 0; i < casasTorre; i++) {
+        printf("Direita\n");
+    }
+
+
+    // ================================
+    // Movimento do Bispo (while)
+    // ================================
+    // O Bispo irá se mover 5 casas na diagonal
+    // (Cima e Direita ao mesmo tempo).
+    // Estrutura utilizada: while
+
+    int casasBispo = 5;
+    int contadorBispo = 0;
+
+    printf("\nMovimento
